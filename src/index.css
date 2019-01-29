@@ -1,0 +1,18 @@
+body {
+  margin: 5%;;
+  padding: 5%;
+  font-family: sans-serif;
+  color: white;
+  font-size: 20px;
+  background: url('hogs.gif') no-repeat center center fixed;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+
+}
+
+.image-flag{
+  width: 30%;
+  border: blue 2px solid;
+}
