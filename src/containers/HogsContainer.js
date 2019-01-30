@@ -7,7 +7,7 @@ class HogsContainer extends React.Component {
     super(props);
     this.state = {
       hogwarts: [],
-      currentCountry: null
+      currentHogwart: null
     };
 
     this.handleCountrySelected
@@ -29,15 +29,15 @@ class HogsContainer extends React.Component {
 
   handleCountrySelected(index) {
     const selectedCountry = this.state.hogwarts[index];
-    this.setState({currentCountry: selectedCountry})
+    this.setState({currentHogwart: selectedCountry})
   }
 
   render(){
     return (
       <div>
       <h2>Hogwarts Container</h2>
-      <HogsSelector hogwarts={this.state.hogwarts} onCountrySelected={this.handleCountrySelected} />
-      <HogsDetail hogwarts={this.state.currentCountry} />
+      <HogsSelector hogwarts={this.state.hogwarts} onHogwartSelected={this.handleCountrySelected} />
+      <HogsDetail hogwarts={this.state.currentHogwart} />
       </div>
     );
   }

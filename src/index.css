@@ -1,10 +1,10 @@
 body {
-  margin: 5%;;
-  padding: 5%;
+
+  margin: 10%;
   font-family: sans-serif;
   color: white;
   font-size: 20px;
-  background: url('hogwart.gif') no-repeat center center fixed;
+  background: url('hogwart.gif') no-repeat center  fixed;
        -webkit-background-size: cover;
        -moz-background-size: cover;
        -o-background-size: cover;
