@@ -10,8 +10,8 @@ class HogsContainer extends React.Component {
       currentHogwart: null
     };
 
-    this.handleCountrySelected
-    = this.handleCountrySelected.bind(this);
+    this.handleHogwartSelected
+    = this.handleHogwartSelected.bind(this);
   }
   componentDidMount(){
     const url = 'http://hp-api.herokuapp.com/api/characters/students';
@@ -20,23 +20,23 @@ class HogsContainer extends React.Component {
 
     request.addEventListener("load", ()=> {
       const jsonString = request.responseText;
-     const countryObjects= JSON.parse(jsonString)//returns coutnry objects
-   this.setState({hogwarts: countryObjects});
+     const characterObjects= JSON.parse(jsonString)//returns coutnry objects
+   this.setState({hogwarts: characterObjects});
 
     });
     request.send();
   }
 
-  handleCountrySelected(index) {
-    const selectedCountry = this.state.hogwarts[index];
-    this.setState({currentHogwart: selectedCountry})
+  handleHogwartSelected(index) {
+    const selectedHogwart= this.state.hogwarts[index];
+    this.setState({currentHogwart: selectedHogwart})
   }
 
   render(){
     return (
       <div>
       <h2>Hogwarts Container</h2>
-      <HogsSelector hogwarts={this.state.hogwarts} onHogwartSelected={this.handleCountrySelected} />
+      <HogsSelector hogwarts={this.state.hogwarts} onHogwartSelected={this.handleHogwartSelected} />
       <HogsDetail hogwarts={this.state.currentHogwart} />
       </div>
     );
