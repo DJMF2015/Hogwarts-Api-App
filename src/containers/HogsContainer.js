@@ -20,7 +20,7 @@ class HogsContainer extends React.Component {
 
     request.addEventListener("load", ()=> {
       const jsonString = request.responseText;
-     const characterObjects= JSON.parse(jsonString)//returns coutnry objects
+     const characterObjects= JSON.parse(jsonString)
    this.setState({hogwarts: characterObjects});
 
     });
@@ -45,8 +45,3 @@ class HogsContainer extends React.Component {
 
 export default HogsContainer;
 
-
-// 1. Diagram the component structure
-// 2. Diagram how data is distributed between the components
-// 3. Where is country selected?
-// 4. Draw and explain the data flow that happens when a country is selected?
